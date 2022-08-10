@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+    font-family: 'Lucida Safontns', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#top{
+    height:1500px;
+    width:100vw;
+    text-align: center;
+    background-color: black;
+}
+
+.top_text{
+    position: sticky;    /* Does not work with parent element overflow hidden*/
+    top:500px;
+    color: darkgoldenrod;
+    background-color: aliceblue;
+    transition: all 1s;
+}
+
+.hide {
+    opacity:0;
+}
+.show {
+    opacity:1;
+}
+
+#bottom{
+    display: flex;
+    height:50vh;
+    width:100vw;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+
+/* LOGO STYLING STARTS */
+#logo_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100vh;
+    text-align: center;
+    color: whitesmoke;
+    overflow: hidden;
+    width:100vw;
+}
+.logo_width{
+    position: absolute;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    margin: auto;
+    /*top:50vh;*/
+}
+#logo{
+    align-items: center;
+    height:70px;
+    animation: float 3s ease-in-out infinite;
+    z-index: 2;
+}
+#logo-rotate{
+    animation: rotate 7s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#logo-fixed{
+    height: 80px;
+}
+@keyframes rotate{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+/* LOGO ends */
